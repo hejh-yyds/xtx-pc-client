@@ -1,0 +1,434 @@
+/* 版心公共类 */
+.container{
+    /* 视具体情况定宽度 */
+    width: 1240px;
+    margin: 0 auto;
+}
+/* 头部模块 */
+.header{
+    background-color: #fff;
+}
+
+/* 快捷菜单模块：xtx-shortcut----------- */
+.xtx-shortcut{
+    height: 52px;
+    background-color: #333;
+}
+
+/* 快捷菜单版心盒子 */
+
+.xtx-shortcut .container{
+    height: 52px;
+    /* ps:观察区域 */
+    /* background-color: skyblue; */
+}
+
+.xtx-shortcut ul li{
+    /* 左浮动 */
+    float: left;
+    /* 竖线颜色 */
+    color: #666;
+
+}
+
+.xtx-shortcut ul a{
+    display: inline-block;
+    height: 52px;
+    margin:0 16px;
+    line-height: 52px;
+    color: #dcdcdc;
+    font-size: 14px;
+}
+
+/* 导航摸上去变色 */
+
+.xtx-shortcut ul a:hover{
+    color: #27ba9b;
+}
+
+.xtx-shortcut li:last-child a{
+    margin-right: 0;
+}
+
+/* 导航添加小手机图案,精灵图 */
+.xtx-shortcut li:last-child a::before {
+    content: '';
+    /* 伪元素默认行内元素，设置宽高须转换 */
+    display: inline-block;
+    width: 11px;
+    height: 16px;
+    /* ps */
+    /* background-color: blue; */
+    /* 垂直对齐，middle */
+    vertical-align: middle;
+
+    margin-right: 8px;
+    margin-top: -3px;
+
+    /* 载入精灵图 */
+    background-image: url('../images/sprites.png');
+    background-position: -160px -70px;
+}
+
+/* ---------------主导航部分 xtx-main-nav */
+
+.xtx-main-nav{
+    height: 130px;
+    padding-top: 30px;
+    /* 自动内减 */
+    box-sizing: border-box;
+    /* ps */
+    /* background-color: pink; */
+}
+
+/* logo */
+.xtx-main-nav .logo a{
+    display: block;
+    width: 207px;
+    height: 70px;
+    /* ps */
+    /* background-color: blue; */
+    background-image: url("../images/logo.png");
+    background-size: 100% 100%;
+    /* 遮盖a标签文字信息 */
+    font-size: 0;
+    margin-left: 25px;
+}
+
+/* 导航 */
+
+.xtx-main-nav nav li{
+    float: left;
+    height: 70px;
+    margin-right: 48px;
+    line-height: 70px;
+}
+
+.xtx-main-nav nav a:hover{
+    color: #27ba9b;
+    border-bottom:1px solid #27ba9b;
+    padding-bottom: 7px;
+}
+
+.xtx-main-nav nav{
+    margin-left: 40px;
+}
+
+/* 搜索栏 */
+.xtx-main-nav .search{
+    position: relative;;
+    width: 172px;
+    height: 30px;
+    margin-left: 34px;
+    margin-top: 24px;
+    border-bottom: 2px solid #e7e7e7;
+    /* box-sizing: border-box; */
+}
+
+
+.xtx-main-nav .search input{
+    /* display: block; */
+    width: 172px;
+    height: 30px;
+   padding-left: 31px;
+    
+    /* ps */
+    /* background-color: green; */
+}
+
+.xtx-main-nav .search::before{
+    position: absolute;
+    left: 2px;
+    top:5px;
+    content: '';
+    display: block;
+    width: 18px;
+    height: 18px;
+    /* background-color: red; */
+
+    /* 载入精灵图 */
+
+    background: url('../images/sprites.png') -79px -69px;
+}
+
+/* 购物车 */
+.xtx-main-nav .cart{
+    position: relative;
+    width: 23px;
+    height: 23px;
+    margin-left: 15px;
+    margin-top: 28px;
+    /* ps */
+    /* background-color: blue; */
+
+    background: url("../images/sprites.png") -120px -69px;
+}
+
+/* 购物车上圆角 */
+.xtx-main-nav .cart .round{
+    position: absolute;
+    right: -12px;
+    top: -5px;
+    width: 20px;
+    height: 15px;
+    border-radius: 8px;
+    background-color: #e26237;
+    text-align: center;
+    line-height: 15px;
+    color: #fff;
+}
+
+/* ----------------尾部区域----footer */
+/* --------联系方式 */
+
+.xtx-contact{
+    color: #fff;
+}
+
+.xtx-contact .container{
+    height: 302px;
+    /* ps */
+    /* background-color: pink; */
+}
+
+.xtx-contact .container {
+    padding-top: 80px;
+    box-sizing: border-box;
+    /* 去除默认行高 */
+    line-height: 1;
+}
+
+/* 客户服务 */
+
+.xtx-contact .container .customer{
+    width: 192px;
+    margin-left: 58px;
+}
+
+.xtx-contact .container .tel h4,
+.xtx-contact .container .app h4,
+.xtx-contact .container .focus-us h4,
+.xtx-contact .container .customer h4{
+    color: #999;
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.xtx-contact .container .focus-us a,
+.xtx-contact .container .customer a{
+    position: relative;
+    display: inline-block;
+    width: 93px;
+    height: 92px;
+    border: 1px solid #eee;
+    color: #999;
+    box-sizing: border-box;
+    text-align: center;
+    padding-top: 59px;
+}
+
+.xtx-contact .container .customer a:nth-of-type(1)::before{
+    position: absolute;
+    left: 31px;
+    top: 18px;
+    content: '';
+    width: 29px;
+    height: 27px;
+    /* ps */
+    /* background-color: blue; */
+    background: url("../images/sprites.png") -205px -70px;
+}
+
+.xtx-contact .container .customer a:nth-of-type(2)::before{
+    position: absolute;
+    left: 31px;
+    top: 18px;
+    content: '';
+    width: 29px;
+    height: 29px;
+    /* ps */
+    /* background-color: blue; */
+    background: url("../images/sprites.png") -300px -70px;
+    
+}
+
+.xtx-contact .container .customer a:nth-of-type(1){
+    margin-right: 6px;
+}
+
+.xtx-contact .container .customer a:nth-of-type(1):hover::before{
+        background-position: -250px -70px;
+}
+
+.xtx-contact .container .customer a:nth-of-type(2):hover::before{
+    background-position: -350px -70px;
+}
+
+/* 关注我们 */
+.xtx-contact .container .focus-us{
+    margin-left: 119px;
+    width: 192px;
+}
+
+.xtx-contact .container .focus-us a:nth-of-type(n+1)::before{
+    position: absolute;
+    left: 31px;
+    top: 18px;
+    content: '';
+    width: 36px;
+    height: 29px;
+    background: url("../images/sprites.png") -204px -15px;
+}
+
+.xtx-contact .container .focus-us a:nth-of-type(2)::before{
+    background-position: -299px -15px;
+}
+
+.xtx-contact .container .focus-us a:nth-of-type(1):hover::before{
+    background-position: -250px -15px;
+}
+
+.xtx-contact .container .focus-us a:nth-of-type(2):hover::before{
+    background-position: -350px -15px;
+}
+
+/* 下载app */
+
+.xtx-contact .container .app{
+    font-size: 14px;
+    width: 240px;
+    margin-left: 93px;
+    color: #999;
+}
+.xtx-contact .container .app img{
+    height: 116px;
+    border: 1px solid #f0f0f0;
+    box-sizing: border-box;
+    
+}
+
+.xtx-contact .container .app h4{
+    margin-bottom: 24px;
+}
+
+
+.xtx-contact .container .app p{
+    margin-top: 7px;
+    line-height: 23px;
+    margin-left: 25px;
+}
+
+.xtx-contact .container .app a{
+    margin-top: 18px;
+    width: 103px;
+    height: 32px;
+    background-color: #27ba9b;
+    text-align: center;
+    line-height: 32px;
+    color: #fff;
+    
+}
+
+/* 服务热线 */
+
+.xtx-contact .container .tel{
+    height: 189px;
+    width: 160px;
+    padding-left: 74px;
+    margin-left: 34px;
+    border-left:1px solid #f2f2f2;
+    /* box-sizing: border-box; */
+    /* ps */
+    /* background-color: blue; */
+}
+
+.xtx-contact .container .tel p:nth-of-type(1){
+    color: #666;
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 17px;
+}
+
+.xtx-contact .container .tel p:nth-of-type(2){
+    color: #999;
+    font-size: 15px;
+    text-align: center;
+}
+
+.xtx-contact .container .tel h4{
+    margin-bottom: 58px;
+}
+
+
+
+/* 宣传服务----------xtx-service */
+.xtx-service{
+    height: 174px;
+    background-color: #333;
+}
+
+.xtx-service .container{
+    height: 174px;
+    width: 1392px;
+    border-bottom: 1px solid #434343;
+    box-sizing: border-box;
+}
+
+.xtx-service .container a{
+    float: left;
+    display: block;
+    width: 33.33%;
+    height: 174px;
+    text-align: center;
+    line-height: 174px;
+    /* ps */
+    /* background-color: blue; */
+    color: #fff;
+    font-size: 28px;
+}
+
+/* 每个a标签之前的伪元素 */
+
+.xtx-service .container a::before{
+    content: '';
+    display: inline-block;
+    width: 58px;
+    height: 58px;
+    margin-right: 14px;
+    /* ps */
+    /* background-color: red; */
+    /* 垂直对齐方式 */
+    vertical-align: middle;
+    background: url("../images/sprites.png") 0 0;
+}
+
+.xtx-service .container  a:nth-child(2)::before{
+    background: url("../images/sprites.png") -130px 0;
+}
+
+.xtx-service .container  a:nth-child(3)::before{
+    background: url("../images/sprites.png") -64px 0;
+}
+
+footer .copyright{
+    height: 168px;
+    background-color: #333;
+    color: #999;
+    text-align: center;
+    padding-top: 41px;
+    box-sizing: border-box;
+    font-size: 14px;
+
+}
+
+footer .copyright a{
+    
+    color: #999;
+}
+
+.copyright p:nth-child(1){
+    margin-bottom: 18px;
+}
+
